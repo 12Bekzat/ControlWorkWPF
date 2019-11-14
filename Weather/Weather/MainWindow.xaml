@@ -1,0 +1,24 @@
+﻿<Window x:Class="Weather.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Weather"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="380*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox HorizontalAlignment="Left" Height="30" Width="300" Margin="40,0,0,0" x:Name="searchByCityTX" Grid.Row="0" Grid.Column="0"/>
+        <Button x:Name="searchBT" Content="Поиск" Width="100" Height="30" Grid.Column="0" Grid.Row="0" Click="EnterSearch"/>
+
+        <DataGrid AutoGenerateColumns="True" Grid.Row="1" Name="tableWeather" Grid.RowSpan="2">
+            <DataGrid.Columns>
+                
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
